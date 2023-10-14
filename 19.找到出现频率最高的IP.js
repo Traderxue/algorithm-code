@@ -9,9 +9,9 @@ const main = (ips) => {
 
   for (let ip of ips) {
     if (ipCount[ip]) {
-      ipCount[ip]++
-    }else{
-    ipCount[ip] = 1
+      ipCount[ip]++     //记录ip出现的次数
+    } else {
+      ipCount[ip] = 1     //第一次出现的ip
     }
   }
 
@@ -19,12 +19,11 @@ const main = (ips) => {
   let maxCount = 0;
 
 
-  for (let ip in ipCount) {
-    // 这里的 ip 是对象 ipCounts 的属性（IP地址）
-    if (ipCount[ip] > maxCount) {
+  for (let ip in ipCount) {             //循环对象 这里的 ip 是对象 ipCounts 的属性（IP地址）
+    if (ipCount[ip] > maxCount) {          
       res_ip = ip;
-      maxCount = ipCount[ip];
-  }
+      maxCount = ipCount[ip];      //如果ip所对应的属性值大于maxCount,就把ip所对应属性值赋值给maxCount然后接着循环直到ipCount[ip]大于所有
+    }
   }
   return res_ip
 }
