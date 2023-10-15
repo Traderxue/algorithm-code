@@ -12,7 +12,7 @@ const fibonacci = (n)=>{
 
     for(let i=2;i<=n;i++){
         let next = num1 +num2
-        num1=num2,
+        num1=num2
         num2=next
     }
     return num2

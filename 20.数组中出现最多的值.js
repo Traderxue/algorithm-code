@@ -18,7 +18,7 @@ const main = (nums) => {
         if (amounts[n] > maxCount) {
             res = n;
             maxCount = amounts[n];
-        } else if (amounts[n] === maxCount && n < res) {
+        } else if (amounts[n] === maxCount && n<res) {
             res = n;
         }
     }
